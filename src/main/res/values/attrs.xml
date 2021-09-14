@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PlusMinusNumView">
+        <attr name="maxNum" format="integer" />
+        <attr name="minNum" format="integer" />
+        <attr name="step" format="float" />
+        <attr name="numTextAppearance" format="reference" />
+    </declare-styleable>
+</resources>
