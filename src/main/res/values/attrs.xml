@@ -4,6 +4,7 @@
         <attr name="maxNum" format="integer" />
         <attr name="minNum" format="integer" />
         <attr name="step" format="float" />
+        <attr name="title" format="string"/>
         <attr name="numTextAppearance" format="reference" />
     </declare-styleable>
 </resources>

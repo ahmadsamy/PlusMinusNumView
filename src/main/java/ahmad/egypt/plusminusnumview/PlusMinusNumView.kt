@@ -12,27 +12,31 @@ class PlusMinusNumView(context: Context, attrSet: AttributeSet?, defStyleAttr:In
         constructor(context: Context,attrSet: AttributeSet) : this(context,attrSet,0)
         constructor(context: Context): this(context,null,0)
 
-    private var maxNum=6f
-    private var minNum=1f
-    private var step=1f
+        private var maxNum=6f
+        private var minNum=1f
+        private var step=1f
+        private var title:String?=null
 
-    private var plusButton:AppCompatImageView
-    private var minusButton:AppCompatImageView
-    private var numTV:TextView
+        private var plusButton:AppCompatImageView
+        private var minusButton:AppCompatImageView
+        private var numTV:TextView
+        private var titleTV:TextView
 
-    var currentNum:Float = maxNum
+
+        var currentNum:Float = maxNum
         get() {
             return numTV.text.toString().toFloat()
         }
 
-    var numChangeListener:OnNumChangeListener?=null
+        var numChangeListener:OnNumChangeListener?=null
 
-    init {
+        init {
         inflate(context, R.layout.plus_minus_num_layout,this)
         plusButton=findViewById(R.id.plus)
         minusButton=findViewById(R.id.minus)
         numTV=findViewById(R.id.numView)
         numTV.text=getFormattedNum(maxNum)
+        titleTV=findViewById(R.id.title)
 
         context.theme.obtainStyledAttributes(
             attrSet,
@@ -42,8 +46,14 @@ class PlusMinusNumView(context: Context, attrSet: AttributeSet?, defStyleAttr:In
                 maxNum = getFloat(R.styleable.PlusMinusNumView_maxNum, 6f)
                 minNum = getFloat(R.styleable.PlusMinusNumView_minNum, 1f)
                 step = getFloat(R.styleable.PlusMinusNumView_step,1f)
-                val textAppearance = getResourceId(R.styleable.PlusMinusNumView_numTextAppearance,android.R.attr.textAppearanceLarge)
+                val textAppearance = getResourceId(R.styleable.PlusMinusNumView_numTextAppearance,
+                    android.R.attr.textAppearanceLarge)
                 numTV.setTextAppearance(context,textAppearance)
+                title=getString(R.styleable.PlusMinusNumView_title)
+                if (title!=null){
+                    titleTV.text=title
+                    titleTV.visibility= VISIBLE
+                }
             } finally {
                 recycle()
             }
