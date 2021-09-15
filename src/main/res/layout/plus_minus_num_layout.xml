@@ -35,7 +35,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
         android:text="6"
-        android:id="@+id/numView"
+        android:id="@+id/valueView"
         />
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
