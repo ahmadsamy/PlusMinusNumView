@@ -1,6 +1,7 @@
 # PlusMinusNumView
 
 ![Preview](https://i.ibb.co/vdW6LLT/Video-Editor-20210916-015933-2.gif)
+*Note: the widget inherits its style from your app theme
 
 *Simple widget that has a number with plus button to increase its value 
 and a minus button to decrease it
@@ -21,7 +22,7 @@ and a minus button to decrease it
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf ="parent"
+    app:layout_constraintTop_toTopOf="parent"
     app:valueTextAppearance="@style/TextAppearance.AppCompat.Large"
     app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
     app:maxVal="6"
