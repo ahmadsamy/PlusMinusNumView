@@ -1,6 +1,6 @@
 # PlusMinusNumView
 
-![Preview](https://i.ibb.co/NxJ1Xgv/Screenshot-from-2021-09-15-13-46-01.png)
+![Preview](https://i.ibb.co/vdW6LLT/Video-Editor-20210916-015933-2.gif)
 
 *Simple widget that has a number with plus button to increase its value 
 and a minus button to decrease it
