@@ -22,12 +22,14 @@ and a minus button to decrease it
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf ="parent"
-    app:valueTextAppearance="?android:attr/textAppearanceLarge"
+    app:valueTextAppearance="@style/TextAppearance.AppCompat.Large"
+    app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
     app:maxVal="6"
     app:minVal="1"
     app:step="1"
     android:id="@+id/plus_minus_num_view"
     app:title="Distance"
+    android:paddingVertical="16dp"
 />
 ```
 
