@@ -12,6 +12,8 @@ and a minus button to decrease it
 - step(float): step value
 - title(string): title of widget
 - valueTextAppearance(reference): text appearance of value TextView
+- titleTextAppearance(reference): text appearance of Title TextView
+
 
 #XML layout usage
 
