@@ -1,6 +1,7 @@
 # PlusMinusNumView
 
 ![Preview](https://i.ibb.co/vdW6LLT/Video-Editor-20210916-015933-2.gif)
+
 *Note: the widget inherits its style from your app theme
 
 *Simple widget that has a number with plus button to increase its value 
