@@ -6,5 +6,6 @@
         <attr name="step" format="float" />
         <attr name="title" format="string"/>
         <attr name="valueTextAppearance" format="reference" />
+        <attr name="titleTextAppearance" format="reference" />
     </declare-styleable>
 </resources>

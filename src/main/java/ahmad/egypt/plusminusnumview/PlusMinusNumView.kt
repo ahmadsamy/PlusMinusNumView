@@ -1,6 +1,7 @@
 package ahmad.egypt.plusminusnumview
 
 import android.content.Context
+import android.os.Build
 import android.util.AttributeSet
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -46,9 +47,19 @@ class PlusMinusNumView(context: Context, attrSet: AttributeSet?, defStyleAttr:In
                 maxVal = getFloat(R.styleable.PlusMinusNumView_maxVal, 6f)
                 minVal = getFloat(R.styleable.PlusMinusNumView_minVal, 1f)
                 step = getFloat(R.styleable.PlusMinusNumView_step,1f)
-                val textAppearance = getResourceId(R.styleable.PlusMinusNumView_valueTextAppearance,
+
+                val valueTextAppearance = getResourceId(R.styleable.PlusMinusNumView_valueTextAppearance,
                     android.R.attr.textAppearanceLarge)
-                valueTV.setTextAppearance(context,textAppearance)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    valueTV.setTextAppearance(valueTextAppearance)
+                }else valueTV.setTextAppearance(context,valueTextAppearance)
+
+                val titleTextAppearance = getResourceId(R.styleable.PlusMinusNumView_valueTextAppearance,
+                    android.R.attr.textAppearanceLarge)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    titleTV.setTextAppearance(titleTextAppearance)
+                }else titleTV.setTextAppearance(context,titleTextAppearance)
+
                 title=getString(R.styleable.PlusMinusNumView_title)
                 if (title!=null){
                     titleTV.text=title
